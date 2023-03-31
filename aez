@@ -1,0 +1,10 @@
+import keyboard
+
+res = ""
+recorded = keyboard.record(until='esc')
+for i in range(len(recorded)):
+    if recorded[i].event_type != "down":
+        if recorded[i].name == "space":
+            res += ""
+        else:
+            res+=recorded[i].name
