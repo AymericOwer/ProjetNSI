@@ -1,0 +1,131 @@
+import tkinter as tk
+
+def fenetre():
+	root = tk.Tk()
+    questionsAsked = []
+
+    def yes():
+        #do stuff if the user says yes
+        fenetre()
+
+    def no():
+        #do stuff if the user says no
+        pass
+
+    def modal(question):
+        if question in questionsAsked:
+            return False
+        questionsAsked.append(question)
+
+        label = tk.Label(root, text=question)
+
+        bYes = tk.Button(root, text="Yes", command=yes)
+        bNo = tk.Button(root, text="No", command=no)
+
+        for el in [label, bYes, bNo]:
+            el.pack()
+
+    modal("Do you want to continue?")
+    root.protocol("WM_DELETE_WINDOW", on_closing)
+    root.mainloop()
+
+
+def yes():
+    #do stuff if the user says yes
+    fenetre()
+
+def no():
+    #do stuff if the user says no
+    pass
+
+def modal(question):
+    if question in questionsAsked:
+        return False
+    questionsAsked.append(question)
+
+    label = tk.Label(root, text=question)
+
+    bYes = tk.Button(root, text="Yes", command=yes)
+    bNo = tk.Button(root, text="No", command=no)
+
+    for el in [label, bYes, bNo]:
+        el.pack()
+
+def on_closing():
+    fenetre()
+
+
+root = tk.Tk()
+questionsAsked = []
+modal("Do you want to continue?")
+root.protocol("WM_DELETE_WINDOW", on_closing)
+root.mainloop()
+
+
+
+
+##########################################################
+
+
+
+
+
+from tkinter import *
+from tkinter import ttk
+keydoc = open("keydoc.txt","a")
+keyon=False
+
+def activer():
+    global keyon
+    keyon = not keyon
+    print("")
+
+def keyboard(keypress):
+    if keyon==True:
+        keydoc.write(keypress.char)
+
+
+
+window = Tk()
+frm = ttk.Frame(window, padding=10)
+frm.grid()
+#window.Button(text="clavier",command=activer(keyon))
+ttk.Button(frm, text="Clavier", command=activer).grid(column=0, row=0)
+ttk.Button(frm, text="Quit", command=window.destroy).grid(column=1, row=0)
+window.bind("<Key>", keyboard)
+window.mainloop()
+
+
+
+################################################################################
+
+
+
+from pynput.keyboard import Key, Listener
+
+def on_press(key):
+    print('{0} pressed'.format(
+        key))         
+
+# Collect events until released
+with Listener(on_press=on_press) as listener:
+    listener.join()
+    
+    
+    
+################################################################################
+
+
+import keyboard
+while True:
+    print(keyboard.read_key())
+
+keyboard.write('The quick brown fox jumps over the lazy dog.')
+keyboard.add_abbreviation('@@', 'aymeric.mariaux@gmail.com')
+
+
+
+
+
+with open("donnees.txt", "w") as fichier:
+    fichier.write(donnee)
