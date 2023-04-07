@@ -6,11 +6,17 @@ Nous avons pour objectif de creer des virus.
 Nous avons pour idees de :
 
 – Ouvrir et fermé des logiciel
+
 – Eteindre l’ordinateur
+
 - activer des qu’une clée entre dans le port USB
+
 – keylogger
+
 – cheval de troie
+
 – bloquer les interaction clavier/souris (→crypter un dossier/Ransomware)
+
 – récupération/ suppression de donné ou cookies (→ voir transférer des donnés sans enlever la clée USB)
 
 					Journal de bord
