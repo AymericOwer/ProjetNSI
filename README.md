@@ -13,7 +13,7 @@ Nous avons pour idees de :
 – bloquer les interaction clavier/souris (→crypter un dossier/Ransomware)
 – récupération/ suppression de donné ou cookies (→ voir transférer des donnés sans enlever la clée USB)
 
-Journal de bord
+					Journal de bord
 
 
 Jour 1:
